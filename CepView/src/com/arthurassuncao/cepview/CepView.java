@@ -34,7 +34,7 @@ import com.arthurassuncao.cepview.net.TarefaObtemDadosCEP;
  * @author Arthur Assuncao
  *
  */
-public class CepView extends RelativeLayout implements IViewCEP{
+public class CepView extends RelativeLayout implements IViewCEP, ICep{
 
 	private static final String msgErroCampoVazio = "Campo %s deve ser preenchido";
 
@@ -50,7 +50,7 @@ public class CepView extends RelativeLayout implements IViewCEP{
 
 	private TarefaObtemDadosCEP tarefaCEP;
 	private ProgressBar barraProgressoCep;
-	private Map<String, Integer> mapCep;
+	private Map<String, Integer> mapEstados;
 
 	public CepView(Context context) {
 		this(context, null);
@@ -76,10 +76,10 @@ public class CepView extends RelativeLayout implements IViewCEP{
 		ArrayAdapter<CharSequence> adapterEstado = ArrayAdapter.createFromResource(this.context, R.array.cep_view_vetor_estados, android.R.layout.simple_spinner_item);
 		adapterEstado.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerEstado.setAdapter(adapterEstado);
-		mapCep = new HashMap<String, Integer>();
+		mapEstados = new HashMap<String, Integer>();
 		String[] estados = getResources().getStringArray(R.array.cep_view_vetor_estados);
 		for (int i = 0; i < estados.length; i++){
-			mapCep.put(estados[i], i);
+			mapEstados.put(estados[i], i);
 		}
 
 		this.changeFieldsAttributes();
@@ -147,8 +147,8 @@ public class CepView extends RelativeLayout implements IViewCEP{
 		verificaCampoCidade();
 		verificaCampoEndereco();
 		String estado = cep.getUf().toUpperCase(local);
-		if(mapCep.containsKey(estado)){
-			spinnerEstado.setSelection(mapCep.get(estado));
+		if(mapEstados.containsKey(estado)){
+			spinnerEstado.setSelection(mapEstados.get(estado));
 		}
 	}
 
@@ -190,12 +190,7 @@ public class CepView extends RelativeLayout implements IViewCEP{
 		}
 		return validos;
 	}
-
-	@Override
-	public void onFinishInflate() {
-
-	}
-
+	
 	public EditText getCampoCEP() {
 		return campoCEP;
 	}
@@ -253,10 +248,71 @@ public class CepView extends RelativeLayout implements IViewCEP{
 	}
 
 	public ProgressBar getBarraProgressoCep() {
-		return barraProgressoCep;
+		return this.barraProgressoCep;
 	}
 
-	public void setBarraProgressoCep(ProgressBar barraProgressoCep) {
-		this.barraProgressoCep = barraProgressoCep;
+	@Override
+	public String getCEP() {
+		return this.campoCEP.getText().toString();
+	}
+
+	@Override
+	public void setCEP(String cep) {
+		this.campoCEP.setText(cep);
+	}
+
+	@Override
+	public String getEndereco() {
+		return this.campoEndereco.getText().toString();
+	}
+
+	@Override
+	public void setEndereco(String endereco) {
+		this.campoEndereco.setText(endereco);
+	}
+
+	@Override
+	public String getNumeroEndereco() {
+		return this.campoNumeroEndereco.getText().toString();
+	}
+
+	@Override
+	public void setNumeroEndereco(String numeroEndereco) {
+		this.campoNumeroEndereco.setText(numeroEndereco);
+	}
+
+	@Override
+	public String getBairro() {
+		return this.campoBairro.getText().toString();
+	}
+
+	@Override
+	public void setBairro(String bairro) {
+		this.campoBairro.setText(bairro);
+	}
+
+	@Override
+	public String getCidade() {
+		return this.campoCidade.getText().toString();
+	}
+
+	@Override
+	public void setCidade(String cidade) {
+		this.campoCidade.setText(cidade);
+	}
+
+	@Override
+	public void setEstado(String estado) {
+		if(mapEstados.containsKey(estado)){
+			this.spinnerEstado.setSelection(mapEstados.get(estado));
+		}
+		else{
+			throw new IllegalArgumentException("Estado não existe");
+		}
+	}
+
+	@Override
+	public String getEstado() {
+		return (String)this.spinnerEstado.getSelectedItem();
 	}
 }
