@@ -21,6 +21,22 @@ Compatível com Android 2.2 ou superior.
 * Gson - Biblioteca para conversão mais fácil de JSON para Java e vice-versa.
 * API de CEP [CorreioControl do Aviso Brasil](http://avisobrasil.com.br/correio-control/api-de-consulta-de-cep/). ~~Esta API pode ser modificada, assim o usuário pode usar a sua própria API.~~
 
+###Como usar
+Adicione o APK do CepView às libs do seu projeto.<br>
+Adicione ao arquivo `AndroidManifest.xml` as seguintes permissões:
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+Crie um componente `com.arthurassuncao.cepview.CepView` em um layout, como o exemplo abaixo:
+```xml
+<com.arthurassuncao.cepview.CepView
+  android:id="@+id/cep_view_exemplo"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content" />
+```
+Pronto, Enjoy it.
+
 ###Desenvolvedor
 * Arthur Nascimento Assuncao
 
