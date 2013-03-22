@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cep_view_acre_sigla">AC</string>
+    <string name="cep_view_alagoas_sigla">AL</string>
+    <string name="cep_view_amapa_sigla">AP</string>
+    <string name="cep_view_amazonas_sigla">AM</string>
+    <string name="cep_view_bahia_sigla">BA</string>
+    <string name="cep_view_ceara_sigla">CE</string>
+    <string name="cep_view_distrito_federal_sigla">DF</string>
+    <string name="cep_view_espirito_santo_sigla">ES</string>
+    <string name="cep_view_goias_sigla">GO</string>
+    <string name="cep_view_maranhao_sigla">MA</string>
+    <string name="cep_view_mato_grosso_sigla">MT</string>
+    <string name="cep_view_mato_grosso_do_sul_sigla">MS</string>
+    <string name="cep_view_minas_gerais_sigla">MG</string>
+    <string name="cep_view_para_sigla">PA</string>
+    <string name="cep_view_paraiba_sigla">PB</string>
+    <string name="cep_view_parana_sigla">PR</string>
+    <string name="cep_view_pernambuco_sigla">PE</string>
+    <string name="cep_view_piaui_sigla">PI</string>
+    <string name="cep_view_rio_de_janeiro_sigla">RJ</string>
+    <string name="cep_view_rio_grande_do_norte_sigla">RN</string>
+    <string name="cep_view_rio_grande_do_sul_sigla">RS</string>
+    <string name="cep_view_rondonia_sigla">RO</string>
+    <string name="cep_view_roraima_sigla">RR</string>
+    <string name="cep_view_santa_catarina_sigla">SC</string>
+    <string name="cep_view_sao_paulo_sigla">SP</string>
+    <string name="cep_view_sergipe_sigla">SE</string>
+    <string name="cep_view_tocantins_sigla">TO</string>
+</resources>

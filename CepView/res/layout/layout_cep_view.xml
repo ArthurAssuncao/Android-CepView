@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".CepView" >
+
+    <TextView
+        android:id="@+id/cep_view_rotulo_cep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cep_view_margem_campos"
+        android:text="@string/cep_view_cep"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/cep_view_campo_texto_cep"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/cep_view_rotulo_endereco"
+        android:layout_toRightOf="@+id/cep_view_rotulo_complemento"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="@integer/cep_view_size_cep"
+        android:nextFocusDown="@+id/cep_view_campo_texto_endereco" >
+        <requestFocus />
+    </EditText>
+
+    <ProgressBar
+        android:id="@+id/cep_view_progress_bar_cep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cep_view_rotulo_numero_endereco"
+        android:layout_alignTop="@+id/cep_view_campo_texto_cep"
+        android:layout_toRightOf="@+id/cep_view_campo_texto_cep" />
+
+    <TextView
+        android:id="@+id/cep_view_rotulo_endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cep_view_rotulo_cep"
+        android:layout_marginTop="@dimen/cep_view_margem_campos"
+        android:text="@string/cep_view_endereco"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/cep_view_campo_texto_endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cep_view_rotulo_endereco"
+        android:layout_alignLeft="@+id/cep_view_campo_texto_cep"
+        android:layout_alignRight="@+id/cep_view_campo_texto_cep"
+        android:layout_below="@+id/cep_view_rotulo_cep"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:maxLength="@integer/cep_view_size_endereco"
+        android:nextFocusDown="@+id/cep_view_campo_texto_numero_endereco" />
+
+    <TextView
+        android:id="@+id/cep_view_rotulo_numero_endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cep_view_campo_texto_endereco"
+        android:layout_below="@+id/cep_view_campo_texto_cep"
+        android:layout_marginTop="@dimen/cep_view_margem_campos"
+        android:layout_toRightOf="@+id/cep_view_campo_texto_endereco"
+        android:text="@string/cep_view_numero"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/cep_view_campo_texto_numero_endereco"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cep_view_campo_texto_endereco"
+        android:layout_toRightOf="@+id/cep_view_rotulo_numero_endereco"
+        android:inputType="textCapCharacters"
+        android:maxLength="@integer/cep_view_size_endereco_numero"
+        android:nextFocusDown="@+id/cep_view_campo_texto_complemento" />
+
+    <TextView
+        android:id="@+id/cep_view_rotulo_complemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cep_view_rotulo_endereco"
+        android:layout_marginTop="@dimen/cep_view_margem_campos"
+        android:text="@string/cep_view_complemento"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/cep_view_campo_texto_complemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cep_view_rotulo_complemento"
+        android:layout_alignLeft="@+id/cep_view_campo_texto_cep"
+        android:layout_alignRight="@+id/cep_view_campo_texto_cep"
+        android:layout_below="@+id/cep_view_rotulo_endereco"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:maxLength="@integer/cep_view_size_endereco_complemento"
+        android:nextFocusDown="@+id/cep_view_campo_texto_bairro" />
+
+    <TextView
+        android:id="@+id/cep_view_rotulo_bairro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cep_view_campo_texto_complemento"
+        android:layout_marginTop="@dimen/cep_view_margem_campos"
+        android:text="@string/cep_view_bairro"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/cep_view_campo_texto_bairro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cep_view_rotulo_bairro"
+        android:layout_alignLeft="@+id/cep_view_campo_texto_cep"
+        android:layout_alignRight="@+id/cep_view_campo_texto_cep"
+        android:layout_below="@+id/cep_view_campo_texto_complemento"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:maxLength="@integer/cep_view_size_bairro"
+        android:nextFocusDown="@+id/cep_view_campo_texto_cidade" />
+
+    <TextView
+        android:id="@+id/cep_view_rotulo_cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cep_view_rotulo_bairro"
+        android:layout_marginTop="@dimen/cep_view_margem_campos"
+        android:text="@string/cep_view_cidade"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/cep_view_campo_texto_cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cep_view_rotulo_cidade"
+        android:layout_alignLeft="@+id/cep_view_campo_texto_cep"
+        android:layout_alignRight="@+id/cep_view_campo_texto_cep"
+        android:layout_below="@+id/cep_view_rotulo_bairro"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:maxLength="@integer/cep_view_size_cidade"
+        android:nextFocusDown="@+id/cep_view_spinner_estado" />
+
+    <TextView
+        android:id="@+id/cep_view_rotulo_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cep_view_rotulo_cidade"
+        android:layout_marginTop="@dimen/cep_view_margem_campos"
+        android:text="@string/cep_view_estado"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/cep_view_spinner_estado"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cep_view_rotulo_estado"
+        android:layout_alignLeft="@+id/cep_view_campo_texto_cidade"
+        android:layout_below="@+id/cep_view_campo_texto_cidade"
+        android:nextFocusDown="@+id/cep_view_campo_texto_cpfcnpj" />
+
+</RelativeLayout>

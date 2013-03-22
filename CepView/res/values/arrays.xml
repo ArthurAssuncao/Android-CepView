@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cep_view_vetor_estados">
+        <item name="acre">@string/cep_view_acre_sigla</item>
+        <item name="alagoas">@string/cep_view_alagoas_sigla</item>
+        <item name="amapa">@string/cep_view_amapa_sigla</item>
+        <item name="amazonas">@string/cep_view_amazonas_sigla</item>
+        <item name="bahia">@string/cep_view_bahia_sigla</item>
+        <item name="ceara">@string/cep_view_ceara_sigla</item>
+        <item name="distrito_federal">@string/cep_view_distrito_federal_sigla</item>
+        <item name="espirito_santo">@string/cep_view_espirito_santo_sigla</item>
+        <item name="goias">@string/cep_view_goias_sigla</item>
+        <item name="maranhao">@string/cep_view_maranhao_sigla</item>
+        <item name="mato_grosso">@string/cep_view_mato_grosso_sigla</item>
+        <item name="mato_grosso_do_sul">@string/cep_view_mato_grosso_do_sul_sigla</item>
+        <item name="minas_gerais">@string/cep_view_minas_gerais_sigla</item>
+        <item name="para">@string/cep_view_para_sigla</item>
+        <item name="paraiba">@string/cep_view_paraiba_sigla</item>
+        <item name="parana">@string/cep_view_parana_sigla</item>
+        <item name="pernambuco">@string/cep_view_pernambuco_sigla</item>
+        <item name="piaui">@string/cep_view_piaui_sigla</item>
+        <item name="rio_de_janeiro">@string/cep_view_rio_de_janeiro_sigla</item>
+        <item name="rio_grande_do_norte">@string/cep_view_rio_grande_do_norte_sigla</item>
+        <item name="rio_grande_do_sul">@string/cep_view_rio_grande_do_sul_sigla</item>
+        <item name="rondonia">@string/cep_view_rondonia_sigla</item>
+        <item name="roraima">@string/cep_view_roraima_sigla</item>
+        <item name="santa_catarina">@string/cep_view_santa_catarina_sigla</item>
+        <item name="sao_paulo">@string/cep_view_sao_paulo_sigla</item>
+        <item name="sergipe">@string/cep_view_sergipe_sigla</item>
+        <item name="tocantins">@string/cep_view_tocantins_sigla</item>
+    </string-array>
+</resources>
