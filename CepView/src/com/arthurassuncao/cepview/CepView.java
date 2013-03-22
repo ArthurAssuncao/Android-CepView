@@ -30,6 +30,10 @@ import android.widget.Spinner;
 import com.arthurassuncao.cepview.model.CEP;
 import com.arthurassuncao.cepview.net.TarefaObtemDadosCEP;
 
+/**
+ * @author Arthur Assuncao
+ *
+ */
 public class CepView extends RelativeLayout implements IViewCEP{
 
 	private static final String msgErroCampoVazio = "Campo %s deve ser preenchido";

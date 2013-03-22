@@ -39,6 +39,10 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
+/**
+ * @author Arthur Assuncao
+ *
+ */
 public class ClienteHttp {
 	private HttpClient cliente;
 	private HttpRequestBase httpRequest;

@@ -13,6 +13,10 @@
 */
 package com.arthurassuncao.cepview.util;
 
+/**
+ * @author Arthur Assuncao
+ *
+ */
 public final class Constantes {
 	// URL API CEP.
 	public static final String URL_API_CEP = "http://cep.correiocontrol.com.br/{CEP}.json";

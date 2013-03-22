@@ -25,6 +25,10 @@ import com.arthurassuncao.cepview.util.Constantes;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 
+/**
+ * @author Arthur Assuncao
+ *
+ */
 public class TarefaObtemDadosCEP extends AsyncTask<String, CEP, Integer> {
 	
 	private IViewCEP activity;

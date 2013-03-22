@@ -15,6 +15,10 @@ package com.arthurassuncao.cepview.model;
 
 import java.io.Serializable;
 
+/**
+ * @author Arthur Assuncao
+ *
+ */
 public class CEP implements Serializable{
 	private static final long serialVersionUID = -8249148862421407402L;
 	private String bairro;

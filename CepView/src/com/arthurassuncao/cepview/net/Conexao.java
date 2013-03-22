@@ -17,6 +17,10 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+/**
+ * @author Arthur Assuncao
+ *
+ */
 public abstract class Conexao {
 	public static boolean verificaConexao(Context contexto) {
 		ConnectivityManager cn = (ConnectivityManager)contexto.getSystemService(Context.CONNECTIVITY_SERVICE);

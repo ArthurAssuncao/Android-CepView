@@ -15,6 +15,10 @@ package com.arthurassuncao.cepview;
 
 import com.arthurassuncao.cepview.model.CEP;
 
+/**
+ * @author Arthur Assuncao
+ *
+ */
 public interface IViewCEP {
 	public void setCarregandoCEP(boolean carregando);
 	public void setCamposEndereco(CEP cep);
