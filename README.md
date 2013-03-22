@@ -1,11 +1,14 @@
 Android-CepView
 ===============
 
-**CepView** - componente com os principais campos relacionados a endereço, fornece preenchimento automático com base no **CEP** informado.
+**CepView** - **Android Cep View** é um componente com os principais campos relacionados a endereço, fornece preenchimento automático dos dados com base no **CEP (Código de Endereçamento Postal)** informado.
+
+Após o preenchimento do campo do número do CEP e perda do foco é feita uma busca na API informada ou, por padrão, na API [CorreioControl do Aviso Brasil](http://avisobrasil.com.br/correio-control/api-de-consulta-de-cep/) e, caso o CEP seja encontrado, os campos Endereço, Bairro, Cidade e Estado são preenchidos com os valores retornados.<br>
+Tudo isso de forma transparente para o programador e visualmente elegante para o usuário, uma vez que durante a busca é mostrado um *ProgressBar* indicando que a pesquisa está sendo feita.
 
 ###Características
 * Campos Disponíveis
-  * Cep - campo de texto para preenchimento do CEP. Após a perda do foco o valor é verificado numa API de CEP e os outros campos são modificados.
+  * Cep - campo de texto para preenchimento do número do CEP. Após a perda do foco o valor é verificado numa API de CEP e os outros campos são modificados.
   * Endereço - campo de texto para preenchimento do Endereço, podendo ser rua, avenida, etc.
   * Número do Endereço - campo de texto para preenchimento do Número do endereço.
   * Complemento - campo de texto para preenchimento do Complemento ao endereço.
@@ -18,17 +21,17 @@ Compatível com Android 2.2 ou superior.
 
 ###Tecnologias Utilizadas
 * Android
-* Gson - Biblioteca para conversão mais fácil de JSON para Java e vice-versa.
+* Gson - Biblioteca para conversão simples de **JSON** para **Java** e vice-versa.
 * API de CEP [CorreioControl do Aviso Brasil](http://avisobrasil.com.br/correio-control/api-de-consulta-de-cep/). ~~Esta API pode ser modificada, assim o usuário pode usar a sua própria API.~~
 
 ###Como usar
-Adicione o APK do CepView às libs do seu projeto.<br>
+Adicione o APK do **CepView** às libs do seu projeto.<br>
 Adicione ao arquivo `AndroidManifest.xml` as seguintes permissões:
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
-Crie um componente `com.arthurassuncao.cepview.CepView` em um layout, como o exemplo abaixo:
+Crie um componente `com.arthurassuncao.cepview.CepView` em um *layout*, como o exemplo abaixo:
 ```xml
 <com.arthurassuncao.cepview.CepView
   android:id="@+id/cep_view_exemplo"
