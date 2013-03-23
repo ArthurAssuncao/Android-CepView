@@ -3,18 +3,19 @@ Android-CepView
 
 **CepView** - **Android Cep View** é um componente com os principais campos relacionados a endereço, fornece preenchimento automático dos dados com base no **CEP (Código de Endereçamento Postal)** informado.
 
+####Funcionamento
 Após o preenchimento do campo do número do CEP e perda do foco é feita uma busca na API informada ou, por padrão, na API [CorreioControl do Aviso Brasil](http://avisobrasil.com.br/correio-control/api-de-consulta-de-cep/) e, caso o CEP seja encontrado, os campos Endereço, Bairro, Cidade e Estado são preenchidos com os valores retornados.<br>
 Tudo isso de forma transparente para o programador e visualmente elegante para o usuário, uma vez que durante a busca é mostrado um *ProgressBar* indicando que a pesquisa está sendo feita.
 
 ###Características
 * Campos Disponíveis
-  * Cep - campo de texto para preenchimento do número do CEP. Após a perda do foco o valor é verificado numa API de CEP e os outros campos são modificados.
-  * Endereço - campo de texto para preenchimento do Endereço, podendo ser rua, avenida, etc.
-  * Número do Endereço - campo de texto para preenchimento do Número do endereço.
-  * Complemento - campo de texto para preenchimento do Complemento ao endereço.
-  * Bairro - campo de texto para preenchimento do Bairro.
-  * Cidade - campo de texto para preenchimento da Cidade.
-  * Estado - spinner (combobox) para seleção do Estado.
+  * **Cep** - campo de texto para preenchimento do número do CEP. Após a perda do foco o valor é verificado numa API de CEP e os outros campos são modificados.
+  * **Endereço** - campo de texto para preenchimento do Endereço, podendo ser rua, avenida, etc.
+  * **Número do Endereço** - campo de texto para preenchimento do Número do endereço.
+  * **Complemento** - campo de texto para preenchimento do Complemento ao endereço.
+  * **Bairro** - campo de texto para preenchimento do Bairro.
+  * **Cidade** - campo de texto para preenchimento da Cidade.
+  * **Estado** - spinner (combobox) para seleção do Estado.
 
 ###Compatibilidade
 Compatível com Android 2.2 ou superior.
