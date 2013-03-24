@@ -1,7 +1,7 @@
 Android-CepView
 ===============
 
-**CepView** - **Android Cep View** é um componente com os principais campos relacionados a endereço, fornece preenchimento automático dos dados com base no **CEP (Código de Endereçamento Postal)** informado.
+**CepView** - **Android Cep View** é um Android UI widget com os principais campos relacionados a endereço (CEP, endereço, número, complemento, bairro, cidade, estado), fornece preenchimento automático dos dados com base no **CEP (Código de Endereçamento Postal)** informado.
 
 ####Funcionamento
 Após o preenchimento do campo do número do CEP e perda do foco é feita uma busca na API informada ou, por padrão, na API [CorreioControl do Aviso Brasil](http://avisobrasil.com.br/correio-control/api-de-consulta-de-cep/) e, caso o CEP seja encontrado, os campos Endereço, Bairro, Cidade e Estado são preenchidos com os valores retornados.<br>
