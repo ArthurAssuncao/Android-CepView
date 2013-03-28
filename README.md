@@ -26,7 +26,7 @@ Compatível com Android 2.2 ou superior.
 * API de CEP [CorreioControl do Aviso Brasil](http://avisobrasil.com.br/correio-control/api-de-consulta-de-cep/). ~~Esta API pode ser modificada, assim o usuário pode usar a sua própria API.~~
 
 ###Como usar
-**CepView** é um [Library Project](http://developer.android.com/guide/developing/eclipse-adt.html#libraryProject), basta adicionar como referência em Library no eclipse.<br>
+**CepView** é um [Library Project](http://developer.android.com/guide/developing/eclipse-adt.html#libraryProject), basta adicionar como referência em Library do seu projeto pelo eclipse.<br>
 Adicione ao arquivo `AndroidManifest.xml` as seguintes permissões:
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
